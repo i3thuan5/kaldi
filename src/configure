@@ -399,10 +399,6 @@ Please open an issue at https://github.com/kaldi-asr/kaldi/issues and include\
  output of either 'nvcc -h' or 'ptxas -h'."
           ;;
       esac
-      if [ $GCC_VER_NUM -ge $MIN_UNSUPPORTED_GCC_VER_NUM ]; then
-        failure "CUDA $CUDA_VERSION does not support $CXX (g++-$GCC_VER).\
- Only versions strictly older than $MIN_UNSUPPORTED_GCC_VER are supported."
-      fi
 
       case $CUDA_VERSION in
         [1-8]_* | 9_0) CUSOLVER=false ;;
